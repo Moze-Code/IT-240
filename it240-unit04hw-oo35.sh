@@ -55,7 +55,7 @@ if echo "$legal_variable" | grep  -q "\#"
 then
     echo "Contains the # character in:$legal_variable"
 else
-	echo "does not containt the \# character"
+	echo "does not containt the # character"
 fi
 
 
