@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+#Name:Omoze oyarebu, Course:It 240, Date:3/31/23
+
+#names and birthday
+my %names_birthday = ('Mark' => '11/30/98', 'Lisa' => '12/25/96', 'Kumar' => '05/24/01', 'Tom' => '01/02/97', 'Joe' => '04/19/93', 'Lara' => '03/24/97');
+
+print "Names and Birthdays are:\n";
+foreach my $key (%names_birthday) {
+    print "$key \n";
+    
+}
+
+#checking if a name exists and returning the birthday
+print "Enter a name you wish to get a birthday from \n";
+my $name_input = <STDIN> ;
+chomp($name_input);
+if ( exists($names_birthday{$name_input} ) ) {
+    print "$name_input has a birthday of $names_birthday{$name_input} \n";
+} else {
+    print "$name_input does not exist \n";
+}
+
+
