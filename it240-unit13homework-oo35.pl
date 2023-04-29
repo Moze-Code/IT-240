@@ -25,9 +25,8 @@ if (scalar(@files) == 0) {
 my @sort_file_list = sort {-C  "$dir/$a" <=> -C "$dir/$b" } @files;
 
 #storing the newest and oldest file ages in days
-my $newest_file = -C(@sort_file_list[0]);
-my $oldest_file = -C(@sort_file_list[-1]);
-
+my $newest_file = -C "$dir/$sort_file_list[0]";
+my $oldest_file = -C "$dir/$sort_file_list[-1]";
 
 print "The newest file in the $dir directory is: $sort_file_list[0]\n";
 printf "It is %.5f days old\n\n", $newest_file;
